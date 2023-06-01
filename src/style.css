@@ -30,7 +30,17 @@ main {
     gap: 20px;
     border-radius: 15px;
 }
-
+.title {
+  font-size: 80px;
+  margin: 0;
+}
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  margin-top: 0;
+  text-align: center;
+}
 .die-face {
   height: 80px;
   width: 80px;
@@ -40,7 +50,6 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: white;
 }
 
 .die-num {
@@ -48,7 +57,7 @@ main {
 }
 .roll-btn {
     height: 80px;
-    width: 150px;
+    width: 250px;
     border: none;
     border-radius: 6px;
     background-color: #5035FF;
