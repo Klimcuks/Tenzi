@@ -12,8 +12,8 @@ main {
   background-color: #fcf5c9;
   border-top: 50px solid #068DA9;
   border-bottom: 50px solid #068DA9;
-  border-left: 30px solid black;
-  border-right: 30px solid black;
+  border-left: 30px solid #025464;
+  border-right: 30px solid #025464;
   border-radius: 15px;
 
   width: 40%;
@@ -33,6 +33,7 @@ main {
 .title {
   font-size: 80px;
   margin: 0;
+  padding-top: 10px
 }
 .instructions {
   font-family: 'Inter', sans-serif;
