@@ -4,4 +4,4 @@
 <p>This was built as my personal project in my final week at the Boolean Course</p>
 <a href="https://tenzi-six.vercel.app/">View the project</a>
 <h1>Tech Stack</h1>
-<p><strong>Front-end: </strong>HTML,CSS,Javascript</p>
+<p><strong>Front-end: </strong>HTML, CSS, Javascript</p>
