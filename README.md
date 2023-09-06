@@ -3,5 +3,5 @@
 ## General information
  - This was built as my personal project in my final week at the Boolean Course
 ### Tech Stack
- - Front-end: HTML, CSS, Javascript
+ - Front-end: HTML, CSS, ReactJS
 ### <a href="https://tenzi-six.vercel.app/">View the project</a>
