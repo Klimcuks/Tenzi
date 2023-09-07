@@ -10,10 +10,10 @@ function App() {
   const [isRolling, setIsRolling] = useState(true);
 
   useEffect(() => {
-    const allHeld = dice.every((die) => die.isHeld);
-    const firstValue = dice[0].value;
-    const allSameValue = dice.every((die) => die.value === firstValue);
-    if (allHeld && allSameValue) {
+    const allHeldDice = dice.every((die) => die.isHeld);
+    const firstVal = dice[0].value;
+    const allSameVal = dice.every((die) => die.value === firstVal);
+    if (allHeldDice && allSameVal) {
       setTenzies(true);
     }
   }, [dice]);
