@@ -8,6 +8,7 @@ function App() {
   const [dice, setDice] = useState(allDice());
   const [tenzies, setTenzies] = useState(false);
   const [isRolling, setIsRolling] = useState(true);
+  const [rollCount, setRollCount] = useState(0)
 
   useEffect(() => {
     const allHeldDice = dice.every((die) => die.isHeld);
@@ -65,10 +66,16 @@ function App() {
             };
         })
       );
+      increaseRollCount()
     } else {
       setTenzies(false);
       setDice(allDice());
+      setRollCount(0)
     }
+  }
+
+  function increaseRollCount(){
+    setRollCount((prevResult)=> prevResult +=1)
   }
 
   return (
@@ -80,9 +87,12 @@ function App() {
         Roll until all dice are the same. Click each die to freeze it at its
         current value between rolls.
       </p>
-
+      <div className="stats">
+        <p>Rolls:{rollCount}</p>
+        <p>Timer:</p>
+      </div>
       {!isRolling ? (
-        <h1 style={{fontSize: 70}}>Rolling...</h1>
+        <h1 style={{fontSize: 50}}>Rolling...</h1>
       ) : (
         <div className="dice-container"> {diceEl}</div>
       )}
