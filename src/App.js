@@ -10,14 +10,33 @@ function App() {
   const [isRolling, setIsRolling] = useState(true);
   const [rollCount, setRollCount] = useState(0)
 
+  const [time, setTime] = useState(0);
+  const [start, setStart] = useState(true);
+
+
+
   useEffect(() => {
     const allHeldDice = dice.every((die) => die.isHeld);
     const firstVal = dice[0].value;
     const allSameVal = dice.every((die) => die.value === firstVal);
     if (allHeldDice && allSameVal) {
       setTenzies(true);
+      setStart(false);
+
     }
   }, [dice]);
+
+  useEffect(() => {
+    let interval = null;
+    if (start) {
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 10);
+      }, 10);
+    } else {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [start]);
 
   function allDice() {
     const arrayOfNums = [];
@@ -71,7 +90,11 @@ function App() {
       setTenzies(false);
       setDice(allDice());
       setRollCount(0)
+
+      setTime(0)
+      setStart((prevVal)=> !prevVal)
     }
+    
   }
 
   function increaseRollCount(){
@@ -88,8 +111,9 @@ function App() {
         current value between rolls.
       </p>
       <div className="stats">
-        <p>Rolls:{rollCount}</p>
-        <p>Timer:</p>
+        <p>Rolls: {rollCount}</p>
+        <p>Timer: {("0" + Math.floor((time / 1000) % 60)).slice(-2)}:
+            {("0" + ((time / 10) % 1000)).slice(-2)}</p>
       </div>
       {!isRolling ? (
         <h1 style={{fontSize: 50}}>Rolling...</h1>
