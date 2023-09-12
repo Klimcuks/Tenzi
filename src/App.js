@@ -22,7 +22,6 @@ function App() {
     if (allHeldDice && allSameVal) {
       setTenzies(true);
       setStart(false);
-
     }
   }, [dice]);
 
