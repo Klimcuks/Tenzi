@@ -25,17 +25,17 @@ function App() {
     }
   }, [dice]);
 
-  useEffect(() => {
-    let interval = null;
-    if (start) {
-      interval = setInterval(() => {
-        setTime((prevTime) => prevTime + 10);
-      }, 10);
-    } else {
-      clearInterval(interval);
-    }
-    return () => clearInterval(interval);
-  }, [start]);
+  // useEffect(() => {
+  //   let interval = null;
+  //   if (start) {
+  //     interval = setInterval(() => {
+  //       setTime((prevTime) => prevTime + 10);
+  //     }, 10);
+  //   } else {
+  //     clearInterval(interval);
+  //   }
+  //   return () => clearInterval(interval);
+  // }, [start]);
 
   function allDice() {
     const arrayOfNums = [];
