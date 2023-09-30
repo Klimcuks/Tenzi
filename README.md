@@ -4,4 +4,11 @@
  - This was built as my personal project in my final week at the Boolean Course
 ### Tech Stack
  - Front-end: HTML, CSS, ReactJS
+#### Screenshots of the challenge
+
+Here are some screenshots of the challenge:
+
+![Screenshot 1](./public/img/Screenshot1.png)
+![Screenshot 2](./assets/img/Screenshot2.png)
+![Screenshot 3](./assets/img/Screenshot3.png)
 ### <a href="https://tenzi-six.vercel.app/">View the project</a>
