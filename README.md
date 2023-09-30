@@ -9,6 +9,6 @@
 Here are some screenshots of the challenge:
 
 ![Screenshot 1](./public/img/Screenshot1.png)
-![Screenshot 2](./assets/img/Screenshot2.png)
-![Screenshot 3](./assets/img/Screenshot3.png)
+![Screenshot 2](./public/img/Screenshot2.png)
+![Screenshot 3](./public/img/Screenshot3.png)
 ### <a href="https://tenzi-six.vercel.app/">View the project</a>
